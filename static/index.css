@@ -1,0 +1,19 @@
+
+body{
+    background-color: red;
+}
+
+.sec_1{
+   max-width: 100em;
+   background-color: grey;
+
+}
+.job_cat a{
+
+    background-color: indianred;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: space-around;
+    text-decoration: none;
+    
+}

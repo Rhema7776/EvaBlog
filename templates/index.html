@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <h1>Todo</h1>
+
+    <div class="job_cat">
+      <a href="{% url 'remote'%}">Remote</a>
+      <a href="{% url 'parttime'%}">Part-time</a>
+      <a href="{% url 'freelance'%}">Freelance</a>
+      <a href="{% url 'internship'%}">Internship</a>
+      <a href="{% url 'fulltime'%}">Fulltime</a>
+      <a href="{% url 'midlevel'%}">Mid-level</a>
+      <a href="{% url 'junior'%}">Junior</a>
+      <a href="{% url 'senior'%}">Senior</a>
+    </div>
+ <div>
+    {% for i in dev %}
+      <div class="sec_1">
+         <h1> Name : {{i.name}}</h1>
+         <p>Email: {{i.email}}</p>
+         <a href="/{{i.id}}"><button>click me</button></a>
+      </div>
+      
+    {% endfor %}
+   <div>
+      <a href="/create">CreateTodo </a>
+
+   </div>
+
+   <!-- <section>
+
+     <h1> dev profile</h1>
+     {% for i in dev %}
+       <h1>>{{i.name}}</h1>
+     {% endfor %}
+
+   </section> -->
+ </div>
+    
+</html>
